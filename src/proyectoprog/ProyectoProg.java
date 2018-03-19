@@ -5,6 +5,7 @@
  */
 package proyectoprog;
 
+import ficheros.TratarCarta;
 /**
  *
  * @author Gonzalo
@@ -16,6 +17,14 @@ public class ProyectoProg {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        Direcion dir = new Direcion();
+        TratarCarta carta = new TratarCarta();
+
+        String calle = dir.selCalle();
+        String local = dir.selRest(calle);
+        carta.cargarCarta(local);
+        
     }
-    
+
 }
