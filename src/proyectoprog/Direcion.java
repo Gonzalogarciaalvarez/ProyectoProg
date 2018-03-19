@@ -13,13 +13,22 @@ import javax.swing.JOptionPane;
  */
 public class Direcion {
 
+    /**
+     * 
+     * @return 
+     */
     public String selCalle() {
         String[] cp = {"30124", "62474", "47757", "78251", "31247", "32604"};
         String input = (String) JOptionPane.showInputDialog(null, "Cual es tu codigo postal?", "Codigo Postal", JOptionPane.QUESTION_MESSAGE, null, cp, cp[1]);
-        System.out.println(input);
+//        System.out.println(input);
         return input;
     }
-
+    
+    /**
+     * 
+     * @param calle
+     * @return 
+     */
     public String selRest(String calle) {
         String local = "";
         switch (calle) {
@@ -54,7 +63,15 @@ public class Direcion {
         return local;
 
     }
-
+    
+    /**
+     * 
+     * @param local1
+     * @param local2
+     * @param local3
+     * @param local4
+     * @return 
+     */
     public String selector(String local1, String local2, String local3, String local4) {
         String input = "";
         if (local1.equalsIgnoreCase("") && local2.equalsIgnoreCase("") && local3.equalsIgnoreCase("") && local4.equalsIgnoreCase("")) {
