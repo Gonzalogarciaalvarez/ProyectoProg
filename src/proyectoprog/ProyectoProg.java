@@ -23,12 +23,16 @@ public class ProyectoProg {
 
         Direcion dir = new Direcion();
         TratarCarta carta = new TratarCarta();
+        Window ventana = new Window();
+        Cuenta cuenta = new Cuenta();
         ArrayList<Carta> cartas = new ArrayList<>();
 
         String calle = dir.selCalle();
         String local = dir.selRest(calle);
-        cartas = carta.cargarCarta(local);
-        
+        carta.cargarCarta(local);
+        System.out.println(cuenta.cuentaTotal());
+
+        ventana.setVisible(true);
 
     }
 
