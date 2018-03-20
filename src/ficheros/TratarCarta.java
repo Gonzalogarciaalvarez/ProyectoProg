@@ -136,4 +136,6 @@ public class TratarCarta {
     public void basicDisplay(String text) {
         JOptionPane.showMessageDialog(null, text);
     }
+    
+    
 }
