@@ -5,6 +5,8 @@
  */
 package ficheros;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Joshua
@@ -36,6 +38,10 @@ public class Carta {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+
+    public ArrayList<Carta> cargarCarta(ArrayList<Carta> cartas) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
