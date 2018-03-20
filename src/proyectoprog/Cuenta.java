@@ -18,10 +18,11 @@ public class Cuenta {
 
     ArrayList<Carta> cartas = new ArrayList<>();
     Carta carta = new Carta();
+    Double precio = (double) 0;
+    Boolean exit = false;
 
     public Double cuentaTotal() {
 //        cartas = carta.cargarCarta(cartas);
-        Double precio = (double) 0;
         String producto = "";
         do {
             try {
@@ -141,21 +142,21 @@ public class Cuenta {
                         break;
                 }
             } catch (NullPointerException ex) {
-                producto = "";
+                exit = true;
             }
-        } while (producto.equals(""));
+        } while (exit == false);
 
         return precio;
     }
 
     public Double sumarCuenta(String producto) {
         cartas = carta.cargarCarta(cartas);
-        Double precio = (double) 0;
+        Double suma = (double) 0;
         for (int i = 0; i < cartas.size(); i++) {
             if (cartas.get(i).getNombre().equalsIgnoreCase(producto)) {
-                precio = precio + cartas.get(i).getPrecio();
+                suma = precio + cartas.get(i).getPrecio();
             }
         }
-        return precio;
+        return suma;
     }
 }
