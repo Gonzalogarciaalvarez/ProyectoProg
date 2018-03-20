@@ -34,8 +34,8 @@ public class TratarCarta {
         switch (local) {
             case "Kebab":
                 try (Scanner sc = new Scanner(new File("Kebab.txt"))) {
-                    String[] ref = sc.nextLine().split(" * ");
                     while (sc.hasNextLine()) {
+                    String[] ref = sc.nextLine().split(" * ");
                         Carta carta = new Carta(ref[0], Float.parseFloat(ref[2]));
                         cartas.add(carta);
 //                        System.out.println(cartas.get(0));
