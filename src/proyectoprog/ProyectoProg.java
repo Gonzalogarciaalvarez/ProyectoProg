@@ -5,7 +5,10 @@
  */
 package proyectoprog;
 
+import ficheros.Carta;
 import ficheros.TratarCarta;
+import java.util.ArrayList;
+
 /**
  *
  * @author Gonzalo
@@ -20,11 +23,13 @@ public class ProyectoProg {
 
         Direcion dir = new Direcion();
         TratarCarta carta = new TratarCarta();
+        ArrayList<Carta> cartas = new ArrayList<>();
 
         String calle = dir.selCalle();
         String local = dir.selRest(calle);
-        carta.cargarCarta(local);
+        cartas = carta.cargarCarta(local);
         
+
     }
 
 }
