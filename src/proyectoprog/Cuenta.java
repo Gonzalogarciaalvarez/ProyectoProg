@@ -23,14 +23,15 @@ public class Cuenta {
 
     public Double cuentaTotal() {
 //        cartas = carta.cargarCarta(cartas);
-        String producto = "";
+        String producto;
         do {
             try {
-                producto = "";
                 producto = JOptionPane.showInputDialog("Elija producto");
                 switch (producto) {
                     case "Kebab":
                         precio = Cuenta.this.sumarCuenta(producto);
+                        System.out.println(precio);
+                        System.out.println("CACA");
                         break;
 
                     case "Durum":
@@ -155,6 +156,7 @@ public class Cuenta {
         for (int i = 0; i < cartas.size(); i++) {
             if (cartas.get(i).getNombre().equalsIgnoreCase(producto)) {
                 suma = precio + cartas.get(i).getPrecio();
+                System.out.println(cartas.get(i).getPrecio());
             }
         }
         return suma;
